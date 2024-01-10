@@ -1,4 +1,5 @@
 import sys
+#from logger import logging
 from logger.logging import logging
 
 
@@ -17,12 +18,12 @@ class customexception(Exception):
         self.file_name, self.lineno, str(self.error_message))
 
 
-# test exception & logging
-# if __name__=="__main__":
-#     try:
-#         logging.info("di by zero error")
-#         a=1/0
+#test exception & logging
+if __name__=="__main__":
+    try:
+        logging.info("di by zero error")
+        a=1/0
 
-#     except Exception as e:
-#         #print(e)
-#         raise customexception(e,sys)
+    except Exception as e:
+        #print(e)
+        raise customexception(e,sys)
